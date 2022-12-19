@@ -1,5 +1,4 @@
-export const fetch = {
-    info : "http://localhost:3001/info",
-    download : "http://localhost:3000/api/download",
-    audio : "http://localhost:3001/api/downloadAudio",
+export const api = {
+    info : "https://youtube-video-downloader-node-l81wt03ef-logesh8220.vercel.app/info",
+    download : "https://youtube-video-downloader-node-l81wt03ef-logesh8220.vercel.app/download",
 }

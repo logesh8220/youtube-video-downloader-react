@@ -4,6 +4,7 @@ import React, { useState } from 'react'
 import { toast } from 'react-toastify'
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import { api } from './config';
 function Downloader() {
 
   const [formats, setformats] = useState([])
@@ -17,7 +18,7 @@ function Downloader() {
       onSubmit: async (Values) => {
         try {
           setLoading(true)
-          let info = await axios.get(`http://localhost:3001/info?url=${Values.url}`)
+          let info = await axios.get(`${api.info}?url=${Values.url}`)
           setLoading(false)
           setformats(info.data.formats)
           console.log(info.data.formats)
@@ -38,7 +39,7 @@ function Downloader() {
     let url = videodata.video_url
     let type = ev.target.name
     setLoading(true)
-    window.location.href = (`http://localhost:3001/download?format=${format}&url=${url}&type=${type}`)
+    window.location.href = (`https://youtube-video-downloader-node-l81wt03ef-logesh8220.vercel.app/?format=${format}&url=${url}&type=${type}`)
     setLoading(false)
   }
   return (
