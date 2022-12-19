@@ -39,7 +39,7 @@ function Downloader() {
     let url = videodata.video_url
     let type = ev.target.name
     setLoading(true)
-    window.location.href = (`https://youtube-video-downloader-node-l81wt03ef-logesh8220.vercel.app/?format=${format}&url=${url}&type=${type}`)
+    window.location.href = (`${api.download}?format=${format}&url=${url}&type=${type}`)
     setLoading(false)
   }
   return (
