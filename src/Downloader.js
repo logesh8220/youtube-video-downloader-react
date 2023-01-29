@@ -18,7 +18,7 @@ function Downloader() {
       onSubmit: async (Values) => {
         try {
           setLoading(true)
-          let info = await axios.get(`${api.info}?url=${Values.url}`)
+          let info = await axios.get(`https://youtubevideodownloaderguvi.onrender.com/info?url=${Values.url}`)
           setLoading(false)
           setformats(info.data.formats)
           console.log(info.data.formats)
